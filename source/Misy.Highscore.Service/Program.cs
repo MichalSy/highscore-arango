@@ -1,5 +1,3 @@
-using System.Reflection;
-
 var builder = WebApplication.CreateSlimBuilder(args);
 
 builder.Logging.AddConsole();
@@ -17,5 +15,5 @@ builder.Services.AddSingleton((_) =>
 
 var app = builder.Build();
 app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
-ScoresApi.ConfigureApi(app);
+app.UseScoresApi();
 app.Run();

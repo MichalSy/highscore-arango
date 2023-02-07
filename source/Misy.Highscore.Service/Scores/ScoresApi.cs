@@ -1,17 +1,15 @@
-﻿using System.Text;
+﻿namespace Misy.Highscore.Service.Scores;
 
-namespace Misy.Highscore.Service;
-
-public class ScoresApi
+public static class ScoresApi
 {
-    public static void ConfigureApi(WebApplication app)
+    public static void UseScoresApi(this WebApplication app)
     {
         var scoresApi = app.MapGroup("/scores");
 
         scoresApi.MapGet("/{servicename?}", async ([FromServices] ArangoDBClient arangoClient, string? servicename) =>
         {
             var query = new StringBuilder("FOR doc IN highscores ");
-            
+
             if (!string.IsNullOrEmpty(servicename))
             {
                 query.AppendLine($"FILTER doc.appname == '{servicename}' ");
