@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Misy.Highscore.Service", "Misy.Highscore.Service\Misy.Highscore.Service.csproj", "{53C819E2-324E-4FE3-A863-81AC15552A7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53C819E2-324E-4FE3-A863-81AC15552A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C819E2-324E-4FE3-A863-81AC15552A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C819E2-324E-4FE3-A863-81AC15552A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C819E2-324E-4FE3-A863-81AC15552A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
