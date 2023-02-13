@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+        - "src/**"
+        - ".github/workflows/build.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v2
+
+    - name: Build and Publish head Docker image
+      uses: VaultVulp/gp-docker-action@v2.5.0
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        image-name: highscore-service
+        build-context: ./source/Misy.Highscore.Service
+        dockerfile: ./source/Misy.Highscore.Service/Dockerfile
