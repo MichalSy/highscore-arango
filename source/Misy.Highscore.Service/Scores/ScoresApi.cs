@@ -6,6 +6,8 @@ public static class ScoresApi
     {
         var scoresApi = app.MapGroup("/scores");
 
+        scoresApi.MapGet("/hello", () => "Hello world");
+
         scoresApi.MapGet("/{servicename?}", async ([FromServices] ArangoDBClient arangoClient, string? servicename) =>
         {
             var query = new StringBuilder("FOR doc IN highscores ");
