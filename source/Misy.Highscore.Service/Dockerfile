@@ -7,6 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:latest AS build
 COPY . .
+RUN dotnet restore "Misy.Highscore.Service.csproj"
 RUN dotnet build "Misy.Highscore.Service.csproj" -c Release -o /app/build
 
 FROM build AS publish
