@@ -7,6 +7,10 @@ on:
         - "source/**"
         - ".github/workflows/build.yml"
 
+defaults:
+  run:
+    working-directory: "source/"
+
 jobs:
   build:
     runs-on: ubuntu-latest
