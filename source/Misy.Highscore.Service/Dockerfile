@@ -6,11 +6,11 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:latest AS build
-WORKDIR /src
+WORKDIR /source
 COPY ["Misy.Highscore.Service/Misy.Highscore.Service.csproj", "Misy.Highscore.Service/"]
 RUN dotnet restore "Misy.Highscore.Service/Misy.Highscore.Service.csproj"
 COPY . .
-WORKDIR "/src/Misy.Highscore.Service"
+WORKDIR "/source/Misy.Highscore.Service"
 RUN dotnet build "Misy.Highscore.Service.csproj" -c Release -o /app/build
 
 FROM build AS publish
