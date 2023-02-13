@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths: 
-        - "src/**"
+        - "source/**"
         - ".github/workflows/build.yml"
 
 jobs:
