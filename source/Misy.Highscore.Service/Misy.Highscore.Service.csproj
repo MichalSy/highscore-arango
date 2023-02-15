@@ -10,9 +10,13 @@
     <UserSecretsId>dbd177b1-8fa2-4a10-98cb-831708ed9f11</UserSecretsId>    
   </PropertyGroup>
 
+  <PropertyGroup>
+    <ContainerImageName>ghcr.io/michalsy/highscore-service</ContainerImageName>
+    <ContainerImageTags>latest</ContainerImageTags>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="ArangoDBNetStandard" Version="2.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
   </ItemGroup>
 
 </Project>
